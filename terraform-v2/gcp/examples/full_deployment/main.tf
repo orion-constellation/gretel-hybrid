@@ -16,10 +16,10 @@ provider "helm" {
 }
 
 # Uncomment the google and google-beta providers to deploy this module directly (if you are not calling it from a parent module)
-# provider "google" {
-#   project = "your-project-here"
-#   region  = "us-central1"
-# }
+ provider "google" {
+  project = "synapse-intelligence"
+  region  = "australia-southeast2"
+ }
 
 # provider "google-beta" {
 #   project = "your-project-here"
@@ -74,7 +74,7 @@ module "node_groups" {
   project_id               = var.project_id
   location                 = var.location
   cluster_name             = module.cluster.cluster_name
-  iam_service_account_name = "${var.deployment_name}-node-sa"
+  iam_service_account_name = "${var.deployment_name}-nodes-sa"
   cpu_node_group_config = {
     node_locations       = var.node_locations
     name                 = "${var.deployment_name}-cpu-model-workers"

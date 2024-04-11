@@ -1,12 +1,12 @@
 variable "project_id" {
   type        = string
-  description = "ID of GCP project in which cluster resources will be deployed"
+  description = "synapse-v0-1-1"
 }
 
 variable "location" {
   type        = string
   nullable    = false
-  description = "The GCP location/region to deploy resources into."
+  description = "australia-southeast2"
 }
 
 variable "vpc_name" {
